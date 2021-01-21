@@ -1,0 +1,27 @@
+{
+  "name": "soft-party-api",
+  "version": "1.0.0",
+  "description": "An api development in nodeJs to provide data to the soft-party system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheuslcandido/soft-party-api.git"
+  },
+  "keywords": [
+    "Api",
+    "nodeJs",
+    "Express",
+    "PostgreSQL",
+    "Docker",
+    "Jest"
+  ],
+  "author": "Matheus Candido",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheuslcandido/soft-party-api/issues"
+  },
+  "homepage": "https://github.com/matheuslcandido/soft-party-api#readme"
+}
