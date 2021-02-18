@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  server:
+    image: node:14.15.4-alpine3.10
+    command: sh -c "npm install && npm start"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    links:
+      - database
+    depends_on:
+      - database
+
+  test:
+    image: node:14.15.4-alpine3.10
+    command: sh -c "npm install && npm test"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    links:
+      - database
+    depends_on:
+      - database
+
+  database:
+    image: postgres:13.1-alpine
+    environment:
+      - POSTGRES_USER=soft-party
+      - POSTGRES_PASSWORD=soft-party
+      - POSTGRES_DB=soft-party
+    ports:
+      - 5432:5432
